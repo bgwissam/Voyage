@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.voyage">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.android.voyage.SiteSeeingActivity"
+            android:label="SiteSeeing"
+            android:parentActivityName="com.example.android.voyage.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.voyage.MainActivity"/>
+        </activity>
+        <activity android:name="com.example.android.voyage.BeachActivity"
+            android:label="Beach"
+            android:parentActivityName="com.example.android.voyage.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.voyage.MainActivity"/>
+        </activity>
+        <activity android:name="com.example.android.voyage.HotelActivity"
+            android:label="Hotel"
+            android:parentActivityName="com.example.android.voyage.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.voyage.MainActivity"/>
+        </activity>
+        <activity android:name="com.example.android.voyage.RestaurentActivity"
+            android:label="Restaurent"
+            android:parentActivityName="com.example.android.voyage.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.voyage.MainActivity"/>
+        </activity>
+    </application>
+
+</manifest>
