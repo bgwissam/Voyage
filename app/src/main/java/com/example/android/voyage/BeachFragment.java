@@ -1,9 +1,6 @@
 package com.example.android.voyage;
 
 import android.support.v4.app.Fragment;
-import android.content.Context;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,15 +10,12 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-
-
 public class BeachFragment extends Fragment {
-    private MediaPlayer playSound;
-    private AudioManager mAudioManager;
-    public BeachFragment() {
-    // Required empty public constructor
 
+    public BeachFragment() {
+        // Required empty public constructor
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,21 +24,17 @@ public class BeachFragment extends Fragment {
         //numbers array
         final ArrayList<Tour> tours = new ArrayList<Tour>();
 
-        //create audiomanager to request audiofocus
-        mAudioManager = (AudioManager)
-                getActivity().getSystemService(Context.AUDIO_SERVICE);
         //list of tours
-        tours.add(new Tour("Iris Beach Club", "Mount Lebanon - Damour", R.drawable.iris_beach_club));
-        tours.add(new Tour("White Beach", "Batroun - Thoum", R.drawable.white_beach));
-        tours.add(new Tour("Pierre & Friends", "Byblos - Madfoun", R.drawable.pierre___friends_beach));
-        tours.add(new Tour("C Flow Beach Resort", "Byblos", R.drawable.c_flow_beach_resort));
-        tours.add(new Tour("Janna Sur Mer Beach", "Damour - Beit el dine Rd.", R.drawable.janna_sur_mer_beach));
-        tours.add(new Tour("Eddesands Resort", "Byblos - Sea Side Rd.", R.drawable.eddesands_resort_beach));
-        tours.add(new Tour("Lazy B Beach", "Jiye - Jiyeh Main St.", R.drawable.lazy_b_beach));
-        tours.add(new Tour("O Glacee Beach", "Batroun - Sea Rd.", R.drawable.o_glacee_beach));
-        tours.add(new Tour("Jonas Beach", "Jiye - Sea Side Rd.", R.drawable.jonas_beach));
-        tours.add(new Tour("Warwick Pangea Beach", "Jiye - Sea Side Rd.", R.drawable.warwick_pangea_beach));
-
+        tours.add(new Tour(R.string.iris_beach_club, R.string.mount_lebanon_damour, R.drawable.iris_beach_club));
+        tours.add(new Tour(R.string.white_beach, R.string.batroun_thoum, R.drawable.white_beach));
+        tours.add(new Tour(R.string.pierre_friends, R.string.byblous_madfoun, R.drawable.pierre___friends_beach));
+        tours.add(new Tour(R.string.c_flow_beach, R.string.byblous, R.drawable.c_flow_beach_resort));
+        tours.add(new Tour(R.string.janna_sur_mer, R.string.mount_lebanon_damour, R.drawable.janna_sur_mer_beach));
+        tours.add(new Tour(R.string.eddesands_resort, R.string.batroun_sea_side, R.drawable.eddesands_resort_beach));
+        tours.add(new Tour(R.string.lazy_b_beach, R.string.jiye_main_st_, R.drawable.lazy_b_beach));
+        tours.add(new Tour(R.string.o_glacee_beach, R.string.batroun_sea_side, R.drawable.o_glacee_beach));
+        tours.add(new Tour(R.string.jonas_beach, R.string.jiye_sea_side, R.drawable.jonas_beach));
+        tours.add(new Tour(R.string.warwick_pangea_beach, R.string.jiye_sea_side, R.drawable.warwick_pangea_beach));
 
         TourAdapter itemsAdapter = new TourAdapter(getActivity(), tours, R.color.category_beach);
 
@@ -52,18 +42,13 @@ public class BeachFragment extends Fragment {
 
         listView.setAdapter(itemsAdapter);
 
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Tour currentPosition = tours.get(position);
-
             }
         });
-
         return rootView;
     }
-
-
 }

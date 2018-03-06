@@ -30,4 +30,83 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- item names for the beach category -->
+    <string name="iris_beach_club">Iris Beach Club</string>
+    <string name="white_beach">White Beach</string>
+    <string name="pierre_friends">Pierre and Friends</string>
+    <string name="c_flow_beach">C Flow Beach Resort</string>
+    <string name="janna_sur_mer">Janna Sur Mer Beach</string>
+    <string name="eddesands_resort">EddeSands Resort</string>
+    <string name="lazy_b_beach">Lazy B Beach</string>
+    <string name="o_glacee_beach">O Glacee Beach</string>
+    <string name="jonas_beach">Jonas Beach</string>
+    <string name="warwick_pangea_beach">WarWick Pangea Beach</string>
+
+    <!-- item names for the hotel category -->
+    <string name="crown_plaza">Crown Plaza</string>
+    <string name="la_bristol">La Bristol</string>
+    <string name="phoenicia">Phoenicia</string>
+    <string name="chtaura_park">Chtaura Park</string>
+    <string name="la_commodore">La Commodore</string>
+    <string name="lancaster_tamar">Lancaster Tamar</string>
+    <string name="the_grand_mashmosh">The Grand Meshmosh</string>
+    <string name="radisson_blu_martinez">Radisson Blu Martinez</string>
+    <string name="hilton_habtoor_grand">Hilton Habtoor Grand</string>
+    <string name="monroe">Monroe</string>
+
+    <!-- item names for the restaurent category -->
+    <string name="mayrin">Mayring</string>
+    <string name="liza">Liza</string>
+    <string name="enab">Enab</string>
+    <string name="batching">Batching</string>
+    <string name="cafe_em_nazih">Cafe Em Nazih</string>
+    <string name="mounir">Mounir</string>
+    <string name="couqley_frensh_bistro">Couqley Frensh Bistro</string>
+    <string name="em_sherif">Em Sherif</string>
+    <string name="al_sultan_ibrahim">Al Sultan Ibrahim</string>
+    <string name="al_falamanky">Al Falamanky</string>
+
+    <!-- item names for the siteseeing category -->
+    <string name="jeita_grotto">Jeitta Grotto</string>
+    <string name="national_museum">National Museum</string>
+    <string name="martyr_square">Martyrs' Square</string>
+    <string name="sursock_museum">Sursock Museum</string>
+    <string name="lebanon_by_kite">Lebanon By Kite</string>
+    <string name="saint_goerge_church">Saint George Cathedral Church</string>
+    <string name="baalbek_roman_runis">Baalbek Roman Ruins</string>
+    <string name="umayyad_city_ruins">Umayyad City Ruins</string>
+    <string name="kamouh_al_hermel">Kamouh Al Hermel</string>
+    <string name="temple_of_echmun">Temple of Echmun</string>
+    <string name="ruins_of_tyre">Ruins of Tyre</string>
+    <string name="stone_pregnant_woman">Stone of the Pregnant Women</string>
+
+    <!-- Location strings for all the categories -->
+    <string name="mount_lebanon_damour">Mount Lebanon - Al Damour</string>
+    <string name="batroun_thoum">Batroun - Thoum</string>
+    <string name="byblous_madfoun">Byblous - Madfoun</string>
+    <string name="byblous">Byblous</string>
+    <string name="byblous_sea_side">Byblous - Sea Side Rd.</string>
+    <string name="batroun_sea_side">Batroun - Sea Side Rd.</string>
+    <string name="jiye_main_st.">Jiye - Main St.</string>
+    <string name="jiye_sea_side">Jiye - Sea Side Rd.</string>
+    <string name="beirut_hamra">Beirut - Hamra</string>
+    <string name="beirut_madame_curie">Beirut - Madam Curie</string>
+    <string name="beirut_ain_mraysawh">Beirut - Ain Al Mraysawh</string>
+    <string name="chtaura">Chtaura</string>
+    <string name="beirut_emile_lahoud">Beirut - Blvr Emile Lahoud</string>
+    <string name="beirut_mar_nicolas">Beirut - Mar Nicolas</string>
+    <string name="beirut_sin_el_fil">Beirut - Sin El Fil</string>
+    <string name="beirut">Beirut</string>
+    <string name="dbayeh">Dbayeh</string>
+    <string name="broumana">Broumana</string>
+    <string name="beirut_kesrwan">Beirut - Kesrwan</string>
+    <string name="beirut_furn_al_shebak">Beirut - Furn Al Shebak</string>
+    <string name="beirut_riyad_al_solh">Beirut - Riyad Al Solh</string>
+    <string name="beirut_achrafieh">Beirut - Ashrafieh</string>
+    <string name="byblos_jounieh">Byblos - Jounieh</string>
+    <string name="baalbek">Baalbek</string>
+    <string name="anjar">Anjar</string>
+    <string name="hermel">Hermel</string>
+    <string name="sidon">Sidon</string>
+    <string name="tyre">Tyre</string>
 </resources>

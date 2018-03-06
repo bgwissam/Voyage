@@ -2,7 +2,6 @@
 package com.example.android.voyage;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -12,15 +11,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.menu.MenuView;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toolbar;
-
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     //create a drawer layout variable to access the drawer view
     public DrawerLayout mDrawerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
         });
-        
+
         android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -64,9 +60,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         //connect the tab layout with the view pager
         tabLayout.setupWithViewPager(viewPager);
-
-
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -77,24 +72,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_beaches: {
                 new BeachFragment();
                 break;
             }
-            case R.id.nav_hotels:{
+            case R.id.nav_hotels: {
                 new HotelFragment();
                 break;
             }
-            case R.id.nav_restaurent:{
+            case R.id.nav_restaurent: {
                 new RestaurentFragment();
                 break;
             }
-            case R.id.nav_siteseeing:{
+            case R.id.nav_siteseeing: {
                 new SiteSeeingFragment();
                 break;
             }
@@ -102,10 +96,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mDrawerLayout.closeDrawers();
         return true;
     }
-    private void setNavigationViewListner(){
+
+    private void setNavigationViewListner() {
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        if(navigationView!=null)
-        navigationView.setNavigationItemSelectedListener(this);
+        if (navigationView != null)
+            navigationView.setNavigationItemSelectedListener(this);
     }
 }

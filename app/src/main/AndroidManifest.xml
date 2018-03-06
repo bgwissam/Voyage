@@ -16,34 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.voyage.SiteSeeingActivity"
-            android:label="SiteSeeing"
-            android:parentActivityName="com.example.android.voyage.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.voyage.MainActivity"/>
-        </activity>
-        <activity android:name="com.example.android.voyage.BeachActivity"
-            android:label="Beach"
-            android:parentActivityName="com.example.android.voyage.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.voyage.MainActivity"/>
-        </activity>
-        <activity android:name="com.example.android.voyage.HotelActivity"
-            android:label="Hotel"
-            android:parentActivityName="com.example.android.voyage.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.voyage.MainActivity"/>
-        </activity>
-        <activity android:name="com.example.android.voyage.RestaurentActivity"
-            android:label="Restaurent"
-            android:parentActivityName="com.example.android.voyage.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.voyage.MainActivity"/>
-        </activity>
     </application>
 
 </manifest>

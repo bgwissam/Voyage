@@ -1,9 +1,6 @@
 package com.example.android.voyage;
 
 import android.support.v4.app.Fragment;
-import android.content.Context;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,16 +10,12 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-
-
 public class HotelFragment extends Fragment {
-    private MediaPlayer playSound;
-    private AudioManager mAudioManager;
-
 
     public HotelFragment() {
         // Required empty public constructor
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,22 +24,17 @@ public class HotelFragment extends Fragment {
         //numbers array
         final ArrayList<Tour> tours = new ArrayList<Tour>();
 
-        //create audiomanager to request audiofocus
-        mAudioManager = (AudioManager)
-                getActivity().getSystemService(Context.AUDIO_SERVICE);
         //list of tours
-        tours.add(new Tour("Crown Plaza", "Beirut - Hamra", R.drawable.crown_plaza_hot));
-        tours.add(new Tour("La Bristol", "Beirut - Madam Curie", R.drawable.le_bristol_hot));
-        tours.add(new Tour("Phoenicia", "Beirut - Ain Le Mraysawh", R.drawable.phoenicia_hot));
-        tours.add(new Tour("Chtaura Park", "Chtaura", R.drawable.chtaura_park_hot));
-        tours.add(new Tour("Le Commodore", "Beirut - Hamra", R.drawable.le_commodore_hot));
-        tours.add(new Tour("Lancaster Tamar", "Beirut - Blvr Emile Lahoud", R.drawable.lancaster_hot));
-        tours.add(new Tour("The Grand Meshmosh", "Beirut - Mar Nicolas", R.drawable.the_grand_meshmosh_hot));
-        tours.add(new Tour("Radisson Blu Martinez", "Beirut - Ain El Mraysawh", R.drawable.radisson_blue_martinez_hot));
-        tours.add(new Tour("Hilton Habtoor Grand", "Beirut - Sin El Fil", R.drawable.hilton_habtoor_grand_hot));
-        tours.add(new Tour("Monroe", "Beirut - Ain El Mraysawh", R.drawable.monroe_hot));
-
-
+        tours.add(new Tour(R.string.crown_plaza, R.string.beirut_hamra, R.drawable.crown_plaza_hot));
+        tours.add(new Tour(R.string.la_bristol, R.string.beirut_madame_curie, R.drawable.le_bristol_hot));
+        tours.add(new Tour(R.string.phoenicia, R.string.beirut_ain_mraysawh, R.drawable.phoenicia_hot));
+        tours.add(new Tour(R.string.chtaura_park, R.string.chtaura, R.drawable.chtaura_park_hot));
+        tours.add(new Tour(R.string.la_commodore, R.string.beirut_hamra, R.drawable.le_commodore_hot));
+        tours.add(new Tour(R.string.lancaster_tamar, R.string.beirut_emile_lahoud, R.drawable.lancaster_hot));
+        tours.add(new Tour(R.string.the_grand_mashmosh, R.string.beirut_mar_nicolas, R.drawable.the_grand_meshmosh_hot));
+        tours.add(new Tour(R.string.radisson_blu_martinez, R.string.beirut_ain_mraysawh, R.drawable.radisson_blue_martinez_hot));
+        tours.add(new Tour(R.string.hilton_habtoor_grand, R.string.beirut_sin_el_fil, R.drawable.hilton_habtoor_grand_hot));
+        tours.add(new Tour(R.string.monroe, R.string.beirut_ain_mraysawh, R.drawable.monroe_hot));
 
         TourAdapter itemsAdapter = new TourAdapter(getActivity(), tours, R.color.category_hotel);
 
@@ -54,13 +42,11 @@ public class HotelFragment extends Fragment {
 
         listView.setAdapter(itemsAdapter);
 
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Tour currentPosition = tours.get(position);
-
             }
         });
         return rootView;

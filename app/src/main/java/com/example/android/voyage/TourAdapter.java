@@ -1,9 +1,7 @@
 package com.example.android.voyage;
 
 import android.app.Activity;
-import android.content.Context;
 import android.media.MediaPlayer;
-
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,21 +9,17 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 
 public class TourAdapter extends ArrayAdapter<Tour> {
-    MediaPlayer playSelectiveSound;
     private int mColorResourceId;
-    private int mSoundResourceId;
     private static final String LOG_TAG = TourAdapter.class.getSimpleName();
 
     public TourAdapter(Activity context, ArrayList<Tour> tours, int colorResourceId) {
         super(context,0, tours);
         mColorResourceId = colorResourceId;
     }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
@@ -61,7 +55,6 @@ public class TourAdapter extends ArrayAdapter<Tour> {
             //make the image invisible
             imageResource.setVisibility(View.GONE);
         }
-
         return listItemView;
     }
 
