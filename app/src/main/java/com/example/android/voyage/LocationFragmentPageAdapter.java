@@ -5,13 +5,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
+public class LocationFragmentPageAdapter extends FragmentPagerAdapter {
 
     final int PAGE_COUNT = 4;
-    private String tabTitles[] = new String[]{"Numbers", "Family", "Colors", "Phrases"};
+    private int tabTitles[] = new int[]{R.string.category_restaurent, R.string.category_hotel, R.string.category_beach, R.string.category_sightseeing};
     private Context mContext;
 
-    public SampleFragmentPagerAdapter(Context context, FragmentManager fm) {
+    public LocationFragmentPageAdapter(Context context, FragmentManager fm) {
 
         super(fm);
         mContext = context;

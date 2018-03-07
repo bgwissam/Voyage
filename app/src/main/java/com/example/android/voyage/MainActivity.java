@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -16,7 +17,8 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     //create a drawer layout variable to access the drawer view
     public DrawerLayout mDrawerLayout;
-
+    //find the view pager that will allow the user to swipe between fragments
+    ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +51,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
-        //find the view pager that will allow the user to swipe between fragments
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
-
         //create an adapter that knows which fragment should use which page
-        SampleFragmentPagerAdapter adapter = new SampleFragmentPagerAdapter(this, getSupportFragmentManager());
-
+        LocationFragmentPageAdapter adapter = new LocationFragmentPageAdapter(this, getSupportFragmentManager());
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
         //give the fixed tab layout the view pager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
@@ -64,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
@@ -71,25 +71,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         return super.onOptionsItemSelected(item);
     }
-
+    @SuppressWarnings("Tab is Empty")
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item) {
+        item.setChecked(true);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        mDrawerLayout.closeDrawers();
 
         switch (item.getItemId()) {
             case R.id.nav_beaches: {
-                new BeachFragment();
+                fragmentManager.beginTransaction().replace(R.id.list_view, new BeachFragment()).commit();
                 break;
             }
             case R.id.nav_hotels: {
-                new HotelFragment();
+                fragmentManager.beginTransaction().replace(R.id.list_view, new HotelFragment()).commit();
                 break;
             }
             case R.id.nav_restaurent: {
-                new RestaurentFragment();
+                fragmentManager.beginTransaction().replace(R.id.list_view, new RestaurentFragment()).commit();
                 break;
             }
             case R.id.nav_siteseeing: {
-                new SiteSeeingFragment();
+                fragmentManager.beginTransaction().replace(R.id.list_view, new SiteSeeingFragment()).commit();
                 break;
             }
         }

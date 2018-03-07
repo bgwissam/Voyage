@@ -1,7 +1,6 @@
 package com.example.android.voyage;
 
 import android.app.Activity;
-import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,25 +34,25 @@ public class TourAdapter extends ArrayAdapter<Tour> {
         textContainer.setBackgroundColor(color);
         //get the location of the object in the list
         Tour currentTour = getItem(position);
-        //find the text view with the id miwak_text id
-        TextView miwakText = (TextView) listItemView.findViewById(R.id.miwak_text);
+        //find the text view with the id name_text_view id
+        TextView nameTextview = (TextView) listItemView.findViewById(R.id.name_text_view);
         //set the text on the miwak text view
-        miwakText.setText(currentTour.getmPlaceName());
+        nameTextview.setText(currentTour.getmPlaceName());
 
-        //find the text view with the english_text id
-        TextView englishText = (TextView) listItemView.findViewById(R.id.english_text);
+        //find the text view with the location_text_view id
+        TextView locationTextView = (TextView) listItemView.findViewById(R.id.location_text_view);
         //set the text on the text view
-        englishText.setText(currentTour.getPlaceAddress());
+        locationTextView.setText(currentTour.getPlaceAddress());
         //sets the image view of the word and its translation
-        ImageView imageResource = (ImageView) listItemView.findViewById(R.id.image_view);
+        ImageView locationImageView = (ImageView) listItemView.findViewById(R.id.location_image_view);
         if(currentTour.checkImage()) {
-            imageResource.setImageResource(currentTour.getPlaceImage());
+            locationImageView.setImageResource(currentTour.getPlaceImage());
             //make the image visible
-            imageResource.setVisibility(View.VISIBLE);
+            locationImageView.setVisibility(View.VISIBLE);
         }
         else {
             //make the image invisible
-            imageResource.setVisibility(View.GONE);
+            locationImageView.setVisibility(View.GONE);
         }
         return listItemView;
     }
